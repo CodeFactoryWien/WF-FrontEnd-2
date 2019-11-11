@@ -25,6 +25,8 @@ import { TeacherService } from "./shared/teacher.service";
 import { CourseService } from "./shared/course.service";
 import { JoinbuttonComponent } from './joinbutton/joinbutton.component';
 import { LoginComponent } from './login/login.component';
+import { TestMoComponent } from './test-mo/test-mo.component';
+import { TestMo1Component } from './test-mo1/test-mo1.component';
 
 
 
@@ -41,7 +43,9 @@ import { LoginComponent } from './login/login.component';
     CoursepageComponent,
     TeacherpageComponent,
     JoinbuttonComponent,
-    LoginComponent
+    LoginComponent,
+    TestMoComponent,
+    TestMo1Component
   ],
   imports: [
     BrowserModule,
