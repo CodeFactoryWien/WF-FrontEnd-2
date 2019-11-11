@@ -23,6 +23,8 @@ import { CoursepageComponent } from './coursepage/coursepage.component';
 import { TeacherpageComponent } from './teacherpage/teacherpage.component';
 import { TeacherService } from "./shared/teacher.service";
 import { CourseService } from "./shared/course.service";
+import { JoinbuttonComponent } from './joinbutton/joinbutton.component';
+import { LoginComponent } from './login/login.component';
 
 
 
@@ -37,7 +39,9 @@ import { CourseService } from "./shared/course.service";
     NavbarComponent,
     FooterComponent,
     CoursepageComponent,
-    TeacherpageComponent
+    TeacherpageComponent,
+    JoinbuttonComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
