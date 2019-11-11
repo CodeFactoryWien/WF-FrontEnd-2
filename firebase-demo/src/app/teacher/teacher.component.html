@@ -1,1 +1,26 @@
+<navbar></navbar>
 <p>teacher works!!</p>
+
+<div class="row">
+        <div class="col-md-5">
+                <!-- We will build this form using ReactiveForm based on the property "form" inside customerservice.ts  -->
+<form [formGroup]="this.customerService.form" (ngSubmit)="onSubmit()">
+
+                        <input type="hidden" formControlName="$key"><!-- this is a primary key for each record of customer and after that we can display the active form control-->
+                        <div class="form-group first">
+                                <label>Full Name</label>
+                                <input formControlName="fullName" class="form-control"[ngClass]="{'is-invalid':submitted && formControls.fullName.errors}"><!-- the value of the formControlName must match the name that we provided inside FormGroup in CustomerService class -->
+                                <div class="invalid-feedback" *ngIf="submitted && formControls.fullName.errors">This field is required</div>
+
+                        </div>
+                        <div class="form-group last">
+                                <label>NickName</label>
+                                <input formControlName="nickName" class="form-control"[ngClass]="{'is-invalid':submitted && formControls.nickName.errors}"><!-- the value of the formControlName must match the name that we provided inside FormGroup in CustomerService class -->
+                                <div class="invalid-feedback" *ngIf="submitted && formControls.nickName.errors">This field is required</div>
+
+                        </div>
+                        <div class="form-group mail">
+                                <label>Favourite Games</label>
+                                <input formControlName="favgames" class="form-control"[ngClass]="{'is-invalid':submitted && formControls.favgames.errors}">
+                                <div class="invalid-feedback" *ngIf="submitted && formControls.favgames.errors">This field is required</div>
+                        </div>
