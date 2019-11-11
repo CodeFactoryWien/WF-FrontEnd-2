@@ -1,1 +1,35 @@
-<p>course-list works!</p>
+<div class="plist">
+  <form class="form-inline" style="width:100%">
+    <input name="searchInput" class="form-control" placeholder="Search" #searchInput="ngModel" [(ngModel)]="searchText" style="width: 97%;">
+    <button class="btn btn-outline-primary" style="background-color: gray"(click)="searchText=''">x</button>
+  </form>
+  <table class="table table-striped bg-dark">
+    <thead>
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col" >Name</th>
+        <th scope="col" class="d-none d-md-table-cell">Teacher</th>
+        <th scope="col" class="d-none d-md-table-cell">Points</th>
+        <th scope="col" class="d-none d-md-table-cell">Goals</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let course of courseArray">
+        <tr *ngIf="filterCondition(course)">
+          <td scope="row">{{course.title}}</td>
+          <td class="">{{courseArray.title}}</td>
+          <td class="d-none d-md-table-cell">{{course.teacher}}</td>
+          <td class="d-none d-md-table-cell">{{course.points}}</td>
+          <td class="d-none d-md-table-cell">{{course.goals}}</td>
+          <td>
+            <button class="btn btn-info " (click)="courseService.populateForm(course)">Edit</button> </td>
+            <td><button class="btn btn-danger" (click)="onDelete(course.$key)">Delete</button>
+          </td>
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
+  <div class="alert alert-danger" *ngIf="showDeletedMessage">Deleted successfully</div>
+</div>
