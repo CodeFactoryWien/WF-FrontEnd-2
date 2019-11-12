@@ -1,10 +1,10 @@
 <nav class="navbar">
   <div class="logo"><a href="#">PGA</a></div>
   <ul>
-    <li><a href="#">HOME</a></li>
-    <li><a href="#">Courses</a></li>
-    <li><a href="#">Contact</a></li>
-    <li><a href="#">Teacher</a></li>
+    <li><a [routerLink]="['/']" routerLinkActive="router-link-active"  href="#">HOME</a></li>
+    <li><a [routerLink]="['/coursepage']" routerLinkActive="router-link-active"  href="#">Courses</a></li>
+    <li><a [routerLink]="['/contactpage']" routerLinkActive="router-link-active" href="#">Contact</a></li>
+    <li><a [routerLink]="['/teacherpage']" routerLinkActive="router-link-active" href="#">Teacher</a></li>
     <li><a href="#">Teacher</a></li>
   </ul>
 </nav>
