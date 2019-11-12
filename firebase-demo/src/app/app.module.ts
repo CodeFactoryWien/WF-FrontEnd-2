@@ -23,6 +23,7 @@ import { CoursepageComponent } from './coursepage/coursepage.component';
 import { TeacherpageComponent } from './teacherpage/teacherpage.component';
 import { TeacherService } from "./shared/teacher.service";
 import { CourseService } from "./shared/course.service";
+import { DataService } from "./shared/data.service";
 import { JoinbuttonComponent } from './joinbutton/joinbutton.component';
 import { LoginComponent } from './login/login.component';
 import { TestMoComponent } from './test-mo/test-mo.component';
