@@ -1,1 +1,6 @@
 <p>teacher-name works!</p>
+ <ng-container *ngFor="let teacher of teacherArray">
+        <div *ngIf="filterCondition(teacher)">
+        	<h1>{{teacher.fullName}}</h1>
+        	
+    </div> </ng-container>
