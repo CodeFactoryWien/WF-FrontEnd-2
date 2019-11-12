@@ -1,12 +1,10 @@
 .container {
   width: 100%;
-  display: flex;
-  align-items: center;
-  min-height: 120vh;
+  text-align: center;
 }
 
 .card-img-overlay {
-  transform: translateY(13rem);
+  transform: translateY(20rem);
   transition: transform 0.18s ease-in;
   background-color: black;
 
@@ -50,4 +48,9 @@
       transition: opacity 0.7s ease-out, transform 0.35s ease-out;
     }
   }
+}
+.foto{
+  width: 10vw;
+  height: 10vw;
+  border-radius: 50%;
 }
