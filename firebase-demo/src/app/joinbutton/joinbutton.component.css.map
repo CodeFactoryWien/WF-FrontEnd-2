@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "joinbutton.component.scss"
+    ],
+    "names": [],
+    "file": "joinbutton.component.css"
+}

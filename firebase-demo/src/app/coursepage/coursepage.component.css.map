@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "coursepage.component.scss"
+    ],
+    "names": [],
+    "file": "coursepage.component.css"
+}
