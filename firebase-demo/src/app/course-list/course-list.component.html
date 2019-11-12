@@ -1,9 +1,24 @@
-<div class="plist">
-  <form class="form-inline" style="width:100%">
-    <input name="searchInput" class="form-control" placeholder="Search" #searchInput="ngModel" [(ngModel)]="searchText" style="width: 97%;">
-    <button class="btn btn-outline-primary" style="background-color: gray"(click)="searchText=''">x</button>
+
+  <form class="form-inline" >
+    <input name="searchInput" class="form-control" placeholder="Search" #searchInput="ngModel" [(ngModel)]="searchText" style="width: 45%;">
+    <button class="btn btn-outline-primary" style="background-color: white; width: 5%;"(click)="searchText=''">x</button>
+
   </form>
-  <table class="table table-striped bg-dark">
+    <br>
+  <div class="alert alert-danger" *ngIf="showDeletedMessage">Deleted successfully</div>
+
+<mat-accordion>
+  <mat-expansion-panel (opened)="panelOpenState = true"
+                       (closed)="panelOpenState = false">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Action Courses
+      </mat-panel-title>
+      <mat-panel-description>
+        Battle Royal, Shooter, Fighting Games
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+      <table class="table table-striped ">
     <thead>
       <tr>
         <th scope="col">Title</th>
@@ -18,18 +33,97 @@
     <tbody>
       <ng-container *ngFor="let course of courseArray">
         <tr *ngIf="filterCondition(course)">
-          <td scope="row">{{course.title}}</td>
-          <td class="">{{course.name}}</td>
-          <td class="d-none d-md-table-cell">{{course.teacher}}</td>
-          <td class="d-none d-md-table-cell">{{course.points}}</td>
-          <td class="d-none d-md-table-cell">{{course.goals}}</td>
-          <td>
+          <td *ngIf ="course.name == 'Action'" scope="row">{{course.title}}</td>
+          <td *ngIf ="course.name == 'Action'" class="d-none d-md-table-cell">{{course.name}}</td>
+          <td *ngIf ="course.name == 'Action'" class="d-none d-md-table-cell">{{course.teacher}}</td>
+          <td *ngIf ="course.name == 'Action'" class="d-none d-md-table-cell">{{course.points}}</td>
+          <td *ngIf ="course.name == 'Action'" class="d-none d-md-table-cell">{{course.goals}}</td>
+          <td *ngIf ="course.name == 'Action'">
             <button class="btn btn-info " (click)="courseService.populateForm(course)">Edit</button> </td>
-            <td><button class="btn btn-danger" (click)="onDelete(course.$key)">Delete</button>
+            <td *ngIf ="course.name == 'Action'"> <button class="btn btn-danger" (click)="onDelete(course.$key)">Delete</button>
+          </td >
+        </tr>
+      </ng-container>
+    </tbody>
+    </table>
+  </mat-expansion-panel>
+  <mat-expansion-panel (opened)="panelOpenState = true"
+                       (closed)="panelOpenState = false">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Jump & Run Courses
+      </mat-panel-title>
+      <mat-panel-description>
+        Speedrun, Run & Gun, Top-Down
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+      <table class="table table-striped ">
+    <thead>
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col" >Name</th>
+        <th scope="col" class="d-none d-md-table-cell">Teacher</th>
+        <th scope="col" class="d-none d-md-table-cell">Points</th>
+        <th scope="col" class="d-none d-md-table-cell">Goals</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+     <tbody>
+      <ng-container *ngFor="let course of courseArray">
+        <tr *ngIf="filterCondition(course)">
+          <td *ngIf ="course.name == 'Jump & Run'" scope="row">{{course.title}}</td>
+          <td *ngIf ="course.name == 'Jump & Run'" class="d-none d-md-table-cell">{{course.name}}</td>
+          <td *ngIf ="course.name == 'Jump & Run'" class="d-none d-md-table-cell">{{course.teacher}}</td>
+          <td *ngIf ="course.name == 'Jump & Run'" class="d-none d-md-table-cell">{{course.points}}</td>
+          <td *ngIf ="course.name == 'Jump & Run'" class="d-none d-md-table-cell">{{course.goals}}</td>
+          <td *ngIf ="course.name == 'Jump & Run'">
+            <button class="btn btn-info " (click)="courseService.populateForm(course)">Edit</button> </td>
+            <td *ngIf ="course.name == 'Jump & Run'"><button class="btn btn-danger" (click)="onDelete(course.$key)">Delete</button>
           </td>
         </tr>
       </ng-container>
     </tbody>
-  </table>
-  <div class="alert alert-danger" *ngIf="showDeletedMessage">Deleted successfully</div>
-</div>
+    </table>
+  </mat-expansion-panel>
+   <mat-expansion-panel (opened)="panelOpenState = true"
+                       (closed)="panelOpenState = false">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Strategy Courses
+      </mat-panel-title>
+      <mat-panel-description>
+        MOBA, Card-Games, Classic Strategy Games
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+      <table class="table table-striped ">
+    <thead>
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col" >Name</th>
+        <th scope="col" class="d-none d-md-table-cell">Teacher</th>
+        <th scope="col" class="d-none d-md-table-cell">Points</th>
+        <th scope="col" class="d-none d-md-table-cell">Goals</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+     <tbody>
+      <ng-container *ngFor="let course of courseArray">
+        <tr *ngIf="filterCondition(course)">
+          <td  *ngIf ="course.name == 'Strategy'" scope="row">{{course.title}}</td>
+          <td *ngIf ="course.name == 'Strategy'" class="d-none d-md-table-cell">{{course.name}}</td>
+          <td *ngIf ="course.name == 'Strategy'" class="d-none d-md-table-cell">{{course.teacher}}</td>
+          <td *ngIf ="course.name == 'Strategy'" class="d-none d-md-table-cell">{{course.points}}</td>
+          <td *ngIf ="course.name == 'Strategy'" class="d-none d-md-table-cell">{{course.goals}}</td>
+          <td *ngIf ="course.name == 'Strategy'">
+            <button class="btn btn-info " (click)="courseService.populateForm(course)">Edit</button> </td>
+            <td *ngIf ="course.name == 'Strategy'"><button class="btn btn-danger" (click)="onDelete(course.$key)">Delete</button>
+          </td>
+        </tr>
+      </ng-container>
+    </tbody>
+    </table>
+  </mat-expansion-panel>
+</mat-accordion>
+

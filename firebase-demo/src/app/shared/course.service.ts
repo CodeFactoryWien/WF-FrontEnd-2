@@ -16,7 +16,7 @@ export class CourseService {
      title: new FormControl('', Validators.required),
      name: new FormControl('', Validators.required),
      teacher: new FormControl('', Validators.required),   
-     points: new FormControl('', [Validators.required, Validators.minLength(1)]),
+     points: new FormControl('', [Validators.required, Validators.minLength(2)]),
      goals: new FormControl ('', Validators.required)
          });
 
@@ -28,7 +28,7 @@ export class CourseService {
                  this.courseList.push({
                          title: course.title,
                          name: course.name,
-                         teacher: course.teacher.toString(),
+                         teacher: course.teacher,
                          points: course.points,
                          goals: course.goals
                   });

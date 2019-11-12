@@ -1,65 +1,67 @@
-
-    <div class = "placeImput">
- 
-    <form [formGroup]="this.courseService.form" (ngSubmit)="onSubmit()">
-      <mat-horizontal-stepper>
-        <mat-step>
-           <ng-template matStepLabel class="d-md-block d-none">Title</ng-template>
-          <input type="hidden" formControlName="$key">
-          <div class="form-group">
-            <input formControlName="title" class="form-control" placeholder="Name"  [ngClass]="{'is-invalid':submitted && formControls.title.errors}">
-            <div class="invalid-feedback" *ngIf="submitted && formControls.title.errors">This field is required</div>
+<div class="placeImput">
+  <form [formGroup]="this.courseService.form" (ngSubmit)="onSubmit()">
+    <mat-horizontal-stepper>
+      <mat-step>
+        <ng-template matStepLabel class="d-md-block d-none">Title</ng-template>
+        <input type="hidden" formControlName="$key">
+        <div class="form-group">
+          <input formControlName="title" class="form-control" placeholder="Name" [ngClass]="{'is-invalid':submitted && formControls.title.errors}">
+          <div class="invalid-feedback" *ngIf="submitted && formControls.title.errors">This field is required</div>
+        </div>
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel>Category</ng-template>
+        <div class="form-group">
+          <mat-form-field>
+            <mat-label>Select an option</mat-label>
+            <mat-select formControlName="name"  placeholder="Name" [ngClass]="{'is-invalid':submitted && formControls.name.errors}" [(value)]="selected">
+              <mat-option>None</mat-option>
+              <mat-option value="Action">Action</mat-option>
+              <mat-option value="Jump & Run">Jump & Run</mat-option>
+              <mat-option value="Strategy">Strategy</mat-option>
+            </mat-select>
+          </mat-form-field>
+         <!--  <input formControlName="name" class="form-control" placeholder="Name" [ngClass]="{'is-invalid':submitted && formControls.name.errors}"> -->
+          <div class="invalid-feedback" *ngIf="submitted && formControls.name.errors">This field is required</div>
+        </div>
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel>Teacher</ng-template>
+        <div class="form-group">
+          <mat-form-field>
+            <mat-label>Teacher</mat-label>
+            <mat-select formControlName="teacher" name="teacher" value="teacher" [ngClass]="{'is-invalid':submitted && formControls.teacher.errors}">
+              <mat-option *ngFor="let teacher of teacherArray" [value]="teacher.fullName">
+                {{teacher.fullName}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <!-- <teacher-name formControlName="teacher"   [ngClass]="{'is-invalid':submitted && formControls.teacher.errors}"></teacher-name> -->
+          <div class="invalid-feedback" *ngIf="submitted && formControls.teacher.errors">invalid teacher ..</div>
+        </div>
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel>Points</ng-template>
+        <div class="form-group">
+          <input formControlName="points" placeholder="Points" class="form-control" [ngClass]="{'is-invalid':submitted && formControls.points.errors}">
+          <div class="invalid-feedback" *ngIf="submitted && formControls.points.errors">
+            <label *ngIf="formControls.points.errors.minlength">at least 2 numbers</label>
           </div>
-        </mat-step>
-        <mat-step>
-          <ng-template matStepLabel>Name</ng-template>
-
-          <div class="form-group">
-            <input formControlName="name" class="form-control" placeholder="Name"  [ngClass]="{'is-invalid':submitted && formControls.name.errors}">
-            <div class="invalid-feedback" *ngIf="submitted && formControls.name.errors">This field is required</div>
-          </div>
-        </mat-step>
-        <mat-step>
-                    <ng-template matStepLabel>Teacher</ng-template>
-
-          <div class="form-group">
-            <mat-form-field >
-          <mat-label>Teacher</mat-label>
-    <mat-select [(ngModel)]="selectedValue" name="teacher" value = "teacher" formControlName="teacher"   [ngClass]="{'is-invalid':submitted && formControls.teacher.errors}">
-      <mat-option *ngFor="let teacher of teacherArray" [value]="teacher.fullName">
-        {{teacher.fullName}}
-      </mat-option>
-    </mat-select>
-  </mat-form-field>
-            <!-- <teacher-name formControlName="teacher"   [ngClass]="{'is-invalid':submitted && formControls.teacher.errors}"></teacher-name> -->
-            <div class="invalid-feedback" *ngIf="submitted && formControls.teacher.errors">invalid teacher ..</div>
-          </div>
-        </mat-step>
-        <mat-step>
-          <ng-template matStepLabel>Points</ng-template>
-          <div class="form-group">
-            <input formControlName="points" placeholder="Points" class="form-control" [ngClass]="{'is-invalid':submitted && formControls.points.errors}">
-            <div class="invalid-feedback" *ngIf="submitted && formControls.points.errors">
-              <label *ngIf="formControls.points.errors.minlength">at least 2 numbers</label>
-            </div>
-          </div>
-        </mat-step>
-        <mat-step>
-         <ng-template matStepLabel>Goals</ng-template>
-          <div class="form-group">
-            <input formControlName="goals" placeholder="Goals" class="form-control" [ngClass]="{'is-invalid':submitted && formControls.goals.errors}">
-            <div class="invalid-feedback" *ngIf="submitted && formControls.goals.errors">invalid goals ..</div>
-            </div>
-        </mat-step>
-      </mat-horizontal-stepper>
-
-      <div class="form-group">
-        <input type="submit" class="btn btn-primary" value="Submit">
-        
-      </div>
-    </form>
-    <div class="alert alert-info" *ngIf="showSuccessMessage">
-      submitted successfully.
+        </div>
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel>Goals</ng-template>
+        <div class="form-group">
+          <input formControlName="goals" placeholder="Goals" class="form-control" [ngClass]="{'is-invalid':submitted && formControls.goals.errors}">
+          <div class="invalid-feedback" *ngIf="submitted && formControls.goals.errors">invalid goals ..</div>
+        </div>
+      </mat-step>
+    </mat-horizontal-stepper>
+    <div class="form-group">
+      <input type="submit" class="btn btn-primary" value="Submit">
     </div>
-     
-    </div>
+  </form>
+  <div class="alert alert-info" *ngIf="showSuccessMessage">
+    submitted successfully.
+  </div>
+</div>
