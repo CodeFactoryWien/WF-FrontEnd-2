@@ -14,12 +14,12 @@
 
 <div class="container">
   <div class="row card-deck">
-    <div class="col-4">
-      <div class="card-deck">
+    <div class="row card-deck" >
+     <!--  <div class="card-deck"> -->
         
       
       <ng-container *ngFor="let teacher of teacherArray">
-        <div class= "card-deck" *ngIf="filterCondition(teacher)">
+        <div class= "col-4 card-deck" *ngIf="filterCondition(teacher)">
           <div class="card text-white"><img class="card-img" src="/assets/card.png" />
             <div class="card-img-overlay">
               <img class="foto"src="/assets/teacher/{{teacher.image}}" alt="img">
@@ -29,8 +29,9 @@
             </div>
           </div>
         </div>
+        
       </ng-container>
     </div>
-    </div>
+<!--     </div> -->
   </div>
 </div>
