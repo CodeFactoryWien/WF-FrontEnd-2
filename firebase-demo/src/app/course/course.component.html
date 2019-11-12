@@ -23,7 +23,15 @@
                     <ng-template matStepLabel>Teacher</ng-template>
 
           <div class="form-group">
-            <teacher-name formControlName="teacher"    [ngClass]="{'is-invalid':submitted && formControls.teacher.errors}"></teacher-name>
+            <mat-form-field >
+          <mat-label>Teacher</mat-label>
+    <mat-select [(ngModel)]="selectedValue" name="teacher" value = "teacher" formControlName="teacher"   [ngClass]="{'is-invalid':submitted && formControls.teacher.errors}">
+      <mat-option *ngFor="let teacher of teacherArray" [value]="teacher.fullName">
+        {{teacher.fullName}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+            <!-- <teacher-name formControlName="teacher"   [ngClass]="{'is-invalid':submitted && formControls.teacher.errors}"></teacher-name> -->
             <div class="invalid-feedback" *ngIf="submitted && formControls.teacher.errors">invalid teacher ..</div>
           </div>
         </mat-step>
@@ -55,4 +63,3 @@
     </div>
      
     </div>
- <teacher-name></teacher-name>   

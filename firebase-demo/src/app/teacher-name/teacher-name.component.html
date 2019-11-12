@@ -1,9 +1,0 @@
-
-    <mat-form-field>
-    <mat-label>Teacher</mat-label>
-    <mat-select [(ngModel)]="selectedValue" name="teacher">
-      <mat-option *ngFor="let teacher of teacherArray" [value]="teacher.fullName">
-        {{teacher.fullName}}
-      </mat-option>
-    </mat-select>
-  </mat-form-field>

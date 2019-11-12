@@ -28,7 +28,7 @@ export class CourseService {
                  this.courseList.push({
                          title: course.title,
                          name: course.name,
-                         teacher: course.teacher,
+                         teacher: course.teacher.toString(),
                          points: course.points,
                          goals: course.goals
                   });

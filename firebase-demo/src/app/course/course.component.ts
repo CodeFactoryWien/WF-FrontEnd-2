@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CourseService } from "../shared/course.service";
+import { TeacherService } from "../shared/teacher.service";
 
 
 @Component({
@@ -9,12 +10,24 @@ import { CourseService } from "../shared/course.service";
 })
 export class CourseComponent implements OnInit {
 
-  constructor(public courseService: CourseService) { }
+  constructor(public courseService: CourseService, public teacherService: TeacherService) { }
  submitted: boolean;
  formControls = this.courseService.form.controls;
  showSuccessMessage: boolean;
+ teacherArray=[];
+ showDeletedMessage : boolean;
+ searchText:string = "";
 
  ngOnInit() {
+         this.teacherService.getteacher().subscribe(
+                 (list) => {
+                         this.teacherArray = list.map( (item) => {
+                                return {
+                                        $key : item.key,
+                                        ...item.payload.val()
+                                }
+                        })
+                 });
 
  }
 
@@ -34,5 +47,15 @@ export class CourseComponent implements OnInit {
          }
    }
  }
- 
+ onDelete($key){
+     if(confirm("Are you sure you want to delete this teacher?")){
+        this.teacherService.deleteteacher($key);
+       this.showDeletedMessage = true;
+       setTimeout(()=> this.showDeletedMessage=false , 3000)
+     }
+   }
+   filterCondition(teacher){
+     return teacher.fullName.toLowerCase().indexOf(this.searchText.toLowerCase()) != -1 ;
+   }
+
 }
