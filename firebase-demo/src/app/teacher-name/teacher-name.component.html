@@ -4,3 +4,12 @@
         	<h1>{{teacher.fullName}}</h1>
         	
     </div> </ng-container>
+
+    <mat-form-field>
+    <mat-label>Favorite food</mat-label>
+    <mat-select [(ngModel)]="selectedValue" name="food">
+      <mat-option *ngFor="let teacher of teacherArray" [value]="teacher.fullName">
+        {{teacher.fullName}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
