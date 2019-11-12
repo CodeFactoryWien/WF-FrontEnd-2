@@ -1,1 +1,33 @@
-<p>teacher-list works!</p>
+<div class="plist">
+  <form class="form-inline" style="width:100%">
+    <input name="searchInput" class="form-control" placeholder="Search" #searchInput="ngModel" [(ngModel)]="searchText" style="width: 97%;">
+    <button class="btn btn-outline-primary" style="background-color: gray"(click)="searchText=''">x</button>
+  </form>
+  <table class="table table-striped bg-dark">
+    <thead>
+      <tr>
+        <th scope="col">Full Name</th>
+        <th scope="col" >nickName</th>
+        <th scope="col" class="d-none d-md-table-cell">favgames</th>
+        <th scope="col" class="d-none d-md-table-cell">image</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let teacher of teacherArray">
+        <tr *ngIf="filterCondition(teacher)">
+          <td scope="row">{{teacher.fullName}}</td>
+          <td scope="row">{{teacher.nickName}}</td>
+          <td class="d-none d-md-table-cell">{{teacher.favgames}}</td>
+          <td class="d-none d-md-table-cell">{{teacher.image}}</td>
+          <td>
+            <button class="btn btn-info " (click)="teacherService.populateForm(teacher)">Edit</button> </td>
+            <td><button class="btn btn-danger" (click)="onDelete(teacher.$key)">Delete</button>
+          </td>
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
+  <div class="alert alert-danger" *ngIf="showDeletedMessage">Deleted successfully</div>
+</div>
