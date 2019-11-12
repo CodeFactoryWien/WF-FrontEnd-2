@@ -19,7 +19,7 @@
       <ng-container *ngFor="let course of courseArray">
         <tr *ngIf="filterCondition(course)">
           <td scope="row">{{course.title}}</td>
-          <td class="">{{courseArray.title}}</td>
+          <td class="">{{course.name}}</td>
           <td class="d-none d-md-table-cell">{{course.teacher}}</td>
           <td class="d-none d-md-table-cell">{{course.points}}</td>
           <td class="d-none d-md-table-cell">{{course.goals}}</td>
