@@ -15,7 +15,7 @@
           <ng-template matStepLabel>NickName</ng-template>
 
           <div class="form-group">
-            <input formControlName="nickName" class="form-control" placeholder="Adress"  [ngClass]="{'is-invalid':submitted && formControls.nickName.errors}">
+            <input formControlName="nickName" class="form-control" placeholder="NickName"  [ngClass]="{'is-invalid':submitted && formControls.nickName.errors}">
             <div class="invalid-feedback" *ngIf="submitted && formControls.nickName.errors">This field is required</div>
           </div>
         </mat-step>
@@ -23,14 +23,14 @@
                     <ng-template matStepLabel>Favourite Games</ng-template>
 
           <div class="form-group">
-            <input formControlName="favgames" class="form-control" placeholder="E-Mail"  [ngClass]="{'is-invalid':submitted && formControls.favgames.errors}">
+            <input formControlName="favgames" class="form-control" placeholder="Favourite Games"  [ngClass]="{'is-invalid':submitted && formControls.favgames.errors}">
             <div class="invalid-feedback" *ngIf="submitted && formControls.favgames.errors">invalid favgames ..</div>
           </div>
         </mat-step>
         <mat-step>
           <ng-template matStepLabel>Image</ng-template>
           <div class="form-group">
-            <input formControlName="image" class="form-control" placeholder="E-Mail"  [ngClass]="{'is-invalid':submitted && formControls.image.errors}">
+            <input formControlName="image" class="form-control" placeholder="Image"  [ngClass]="{'is-invalid':submitted && formControls.image.errors}">
             <div class="invalid-feedback" *ngIf="submitted && formControls.image.errors">invalid image ..</div>
           </div>
         </mat-step>
