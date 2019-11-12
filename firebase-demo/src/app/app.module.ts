@@ -28,6 +28,8 @@ import { JoinbuttonComponent } from './joinbutton/joinbutton.component';
 import { LoginComponent } from './login/login.component';
 import { TestMoComponent } from './test-mo/test-mo.component';
 import { TestMo1Component } from './test-mo1/test-mo1.component';
+import { TeacherNameComponent } from './teacher-name/teacher-name.component';
+import { ContactpageComponent } from './contactpage/contactpage.component';
 
 
 
@@ -46,7 +48,9 @@ import { TestMo1Component } from './test-mo1/test-mo1.component';
     JoinbuttonComponent,
     LoginComponent,
     TestMoComponent,
-    TestMo1Component
+    TestMo1Component,
+    TeacherNameComponent,
+    ContactpageComponent
   ],
   imports: [
     BrowserModule,
