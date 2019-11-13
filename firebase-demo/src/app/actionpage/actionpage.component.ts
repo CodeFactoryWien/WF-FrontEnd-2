@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-actionpage',
+  selector: 'actionpage',
   templateUrl: './actionpage.component.html',
   styleUrls: ['./actionpage.component.scss']
 })

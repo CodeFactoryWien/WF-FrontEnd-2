@@ -4,7 +4,9 @@ import { CoursepageComponent } from './coursepage/coursepage.component';
 import { TeacherpageComponent } from './teacherpage/teacherpage.component';
 import { LandingpageComponent } from './landingpage/landingpage.component';
 import { ContactpageComponent } from './contactpage/contactpage.component';
-
+import { ActionpageComponent } from './actionpage/actionpage.component';
+import { JumppageComponent } from './jumppage/jumppage.component';
+import { StrategypageComponent } from './strategypage/strategypage.component';
 
 const routes: Routes = [{
 
@@ -26,6 +28,18 @@ const routes: Routes = [{
 
 {
 		 path: "coursepage",component: CoursepageComponent
+
+},
+{
+		 path: "action",component: ActionpageComponent
+
+},
+{
+		 path: "jump",component: JumppageComponent
+
+},
+{
+		 path: "strategy",component: StrategypageComponent
 
 }
 ];
