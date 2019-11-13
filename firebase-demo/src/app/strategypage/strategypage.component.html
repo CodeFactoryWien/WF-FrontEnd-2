@@ -1,1 +1,29 @@
 <p>strategypage works!</p>
+ <table class="table table-striped ">
+    <thead>
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col" >Name</th>
+        <th scope="col" class="d-none d-md-table-cell">Teacher</th>
+        <th scope="col" class="d-none d-md-table-cell">Points</th>
+        <th scope="col" class="d-none d-md-table-cell">Goals</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+     <tbody>
+      <ng-container *ngFor="let course of courseArray">
+        <tr *ngIf="filterCondition(course)">
+          <td  *ngIf ="course.name == 'Strategy'" scope="row">{{course.title}}</td>
+          <td *ngIf ="course.name == 'Strategy'" class="d-none d-md-table-cell">{{course.name}}</td>
+          <td *ngIf ="course.name == 'Strategy'" class="d-none d-md-table-cell">{{course.teacher}}</td>
+          <td *ngIf ="course.name == 'Strategy'" class="d-none d-md-table-cell">{{course.points}}</td>
+          <td *ngIf ="course.name == 'Strategy'" class="d-none d-md-table-cell">{{course.goals}}</td>
+          <td *ngIf ="course.name == 'Strategy'">
+            <button class="btn btn-info " (click)="courseService.populateForm(course)">Edit</button> </td>
+            <td *ngIf ="course.name == 'Strategy'"><button class="btn btn-danger" (click)="onDelete(course.$key)">Delete</button>
+          </td>
+        </tr>
+      </ng-container>
+    </tbody>
+    </table>
