@@ -30,6 +30,9 @@ import { TestMoComponent } from './test-mo/test-mo.component';
 import { TestMo1Component } from './test-mo1/test-mo1.component';
 import { ContactpageComponent } from './contactpage/contactpage.component';
 import { CoursecardComponent } from './coursecard/coursecard.component';
+import { ActionpageComponent } from './actionpage/actionpage.component';
+import { JumppageComponent } from './jumppage/jumppage.component';
+import { StrategypageComponent } from './strategypage/strategypage.component';
 
 
 
@@ -50,7 +53,10 @@ import { CoursecardComponent } from './coursecard/coursecard.component';
     TestMoComponent,
     TestMo1Component,
     ContactpageComponent,
-    CoursecardComponent
+    CoursecardComponent,
+    ActionpageComponent,
+    JumppageComponent,
+    StrategypageComponent
   ],
   imports: [
     BrowserModule,
