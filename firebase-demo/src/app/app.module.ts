@@ -29,6 +29,7 @@ import { LoginComponent } from './login/login.component';
 import { TestMoComponent } from './test-mo/test-mo.component';
 import { TestMo1Component } from './test-mo1/test-mo1.component';
 import { ContactpageComponent } from './contactpage/contactpage.component';
+import { CoursecardComponent } from './coursecard/coursecard.component';
 
 
 
@@ -48,7 +49,8 @@ import { ContactpageComponent } from './contactpage/contactpage.component';
     LoginComponent,
     TestMoComponent,
     TestMo1Component,
-    ContactpageComponent
+    ContactpageComponent,
+    CoursecardComponent
   ],
   imports: [
     BrowserModule,
