@@ -2,9 +2,10 @@
 
 .container {
   width: 100%;
-  display: flex;
+  margin-top: 20vw;
   align-items: center;
   min-height: 120vh;
+  text-align: center;
 }
 
 .card-img-overlay {
@@ -16,6 +17,8 @@
     opacity: 0;
     transform: translateY(-6rem);
     transition: opacity 0.05s ease-in, transform 0.25s ease-in;
+    width:16vw;
+    height:16vw;
   }
 
   .btn {
