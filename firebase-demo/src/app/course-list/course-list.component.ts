@@ -40,7 +40,7 @@ onDelete($key){
      return course.title.toLowerCase().indexOf(this.searchText.toLowerCase()) != -1 ;
    }
   
-   getPrice(p){
+      getPrice(p){
      let sum = 0;
      for(let i = 0; i<this.courseArray.length;i++){
        if(this.courseArray[i].name == p){

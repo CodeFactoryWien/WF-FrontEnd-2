@@ -40,6 +40,10 @@ const routes: Routes = [{
 
 },
 {
+		 path: "strategy",component: StrategypageComponent
+
+},
+{
 		 path: "testimonials",component: TestimonialsComponent
 
 } 
