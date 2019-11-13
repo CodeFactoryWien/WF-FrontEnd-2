@@ -7,6 +7,7 @@ import { ContactpageComponent } from './contactpage/contactpage.component';
 import { ActionpageComponent } from './actionpage/actionpage.component';
 import { JumppageComponent } from './jumppage/jumppage.component';
 import { StrategypageComponent } from './strategypage/strategypage.component';
+import { TestimonialsComponent } from './testimonials/testimonials.component';
 
 const routes: Routes = [{
 
@@ -16,18 +17,18 @@ const routes: Routes = [{
 
 {
 
-        path: "teacherpage",component: TeacherpageComponent
+        path: "teacher",component: TeacherpageComponent
 
 }, 
 {
 
-        path: "contactpage",component: ContactpageComponent
+        path: "contact",component: ContactpageComponent
 
 }, 
 
 
 {
-		 path: "coursepage",component: CoursepageComponent
+		 path: "course",component: CoursepageComponent
 
 },
 {
@@ -39,9 +40,10 @@ const routes: Routes = [{
 
 },
 {
-		 path: "strategy",component: StrategypageComponent
+		 path: "testimonials",component: TestimonialsComponent
 
-}
+} 
+
 ];
 
 @NgModule({

@@ -34,6 +34,7 @@ import { ActionpageComponent } from './actionpage/actionpage.component';
 import { JumppageComponent } from './jumppage/jumppage.component';
 import { StrategypageComponent } from './strategypage/strategypage.component';
 import { HeroComponent } from './hero/hero.component';
+import { TestimonialsComponent } from './testimonials/testimonials.component';
 
 
 HeroComponent
@@ -58,7 +59,8 @@ HeroComponent
     ActionpageComponent,
     JumppageComponent,
     StrategypageComponent,
-    HeroComponent
+    HeroComponent,
+    TestimonialsComponent
   ],
   imports: [
     BrowserModule,
