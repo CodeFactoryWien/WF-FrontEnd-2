@@ -33,9 +33,10 @@ import { CoursecardComponent } from './coursecard/coursecard.component';
 import { ActionpageComponent } from './actionpage/actionpage.component';
 import { JumppageComponent } from './jumppage/jumppage.component';
 import { StrategypageComponent } from './strategypage/strategypage.component';
+import { HeroComponent } from './hero/hero.component';
 
 
-
+HeroComponent
 @NgModule({
   declarations: [
     AppComponent,
@@ -56,7 +57,8 @@ import { StrategypageComponent } from './strategypage/strategypage.component';
     CoursecardComponent,
     ActionpageComponent,
     JumppageComponent,
-    StrategypageComponent
+    StrategypageComponent,
+    HeroComponent
   ],
   imports: [
     BrowserModule,
