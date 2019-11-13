@@ -44,6 +44,7 @@
           </td >
         </tr>
       </ng-container>
+      <h1>Total Price {{getPrice("Action")}} €</h1>
     </tbody>
     </table>
   </mat-expansion-panel>
@@ -83,6 +84,8 @@
           </td>
         </tr>
       </ng-container>
+      <h1>Total Price: {{getPrice("Jump & Run")}} €</h1>
+
     </tbody>
     </table>
   </mat-expansion-panel>
@@ -96,7 +99,7 @@
         MOBA, Card-Games, Classic Strategy Games
       </mat-panel-description>
     </mat-expansion-panel-header>
-      <table class="table table-striped ">
+      <table class="table table-striped " >
     <thead>
       <tr>
         <th scope="col">Title</th>
@@ -120,10 +123,12 @@
             <button class="btn btn-info " (click)="courseService.populateForm(course)">Edit</button> </td>
             <td *ngIf ="course.name == 'Strategy'"><button class="btn btn-danger" (click)="onDelete(course.$key)">Delete</button>
           </td>
+          
         </tr>
       </ng-container>
     </tbody>
     </table>
+    <h1>Total Price {{getPrice("Strategy")}} €</h1>
   </mat-expansion-panel>
 </mat-accordion>
 

@@ -39,5 +39,24 @@ onDelete($key){
    filterCondition(course){
      return course.title.toLowerCase().indexOf(this.searchText.toLowerCase()) != -1 ;
    }
+  
+   getPrice(p){
+     let sum = 0;
+     for(let i = 0; i<this.courseArray.length;i++){
+       if(this.courseArray[i].name == p){
+       let add = this.courseArray[i].points;
+       sum += add*1;
+     }
+     }
+     if (sum > 120){
+     return (sum  *40)*0.9;
+     }
+     else if (sum > 60){
+       return (sum  *40) *0.5;
+     }
+     else {
+       return sum * 40;
+     }
+   }
 
 }
