@@ -14,8 +14,9 @@
   background-color: black;
 
   .card-text {
-    opacity: 0;
-    transform: translateY(-6rem);
+    opacity: 0.6;
+    transform: translateY(2rem);
+
     transition: opacity 0.05s ease-in, transform 0.25s ease-in;
     width:16vw;
     height:16vw;
