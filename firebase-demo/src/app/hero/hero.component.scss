@@ -9,3 +9,13 @@
   background-repeat: no-repeat;
   top: -280px;
 }
+@media screen and (max-width:1400px){
+  .hero-img{
+    background-size:contain;
+    width:100%;
+  }
+}
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
