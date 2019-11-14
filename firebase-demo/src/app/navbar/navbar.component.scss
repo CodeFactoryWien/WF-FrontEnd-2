@@ -24,6 +24,16 @@
 
   align-items: center;
   justify-content: left;}
+  @media screen and  (max-width: 992px) {
+    .navbar{
+      margin-top:28%;
+      width:100%;
+      margin-left:0;
+     margin-bottom:15%;
+    }
+
+  }
+
 
   // ul {
   //   list-style: none;
