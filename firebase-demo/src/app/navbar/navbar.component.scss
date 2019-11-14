@@ -3,9 +3,9 @@
 
   margin-top: -15px;
   background-image: url("../../assets/header.png");
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
-  height: 36em;
+  height: 30em;
 }
 
 .dropdown-menu{
@@ -31,7 +31,7 @@ a:hover{
   justify-content: left;}
   @media screen and  (max-width: 992px) {
     .navbar{
-      margin-top:28%;
+      margin-top:5%;
       width:100%;
       margin-left:0;
      margin-bottom:15%;
