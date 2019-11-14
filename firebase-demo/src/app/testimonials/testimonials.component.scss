@@ -1,17 +1,25 @@
+/* cards */
+
 .container {
   width: 100%;
+  margin-top: 20vw;
+  align-items: center;
+  min-height: 0vh;
   text-align: center;
 }
 
 .card-img-overlay {
-  transform: translateY(12rem);
+  transform: translateY(13rem);
   transition: transform 0.18s ease-in;
   background-color: black;
 
   .card-text {
-    opacity: 0;
-    transform: translateY(-6rem);
+    opacity: 0.6;
+    transform: translateY(2rem);
+
     transition: opacity 0.05s ease-in, transform 0.25s ease-in;
+    width:16vw;
+    height:16vw;
   }
 
   .btn {
@@ -21,10 +29,9 @@
 }
 
 .card {
-  
+  width: 30%;
   overflow: hidden;
   background-color: #345;
-  margin-bottom: 2vw;
 
   &:hover {
     .card-img {
@@ -50,8 +57,5 @@
     }
   }
 }
-.foto{
-  width: 50%;
-  height: 50%;
-  border-radius: 50%;
-}
+
+
