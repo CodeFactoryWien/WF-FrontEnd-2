@@ -1,8 +1,8 @@
 
     <div class = "placeImput container">
- 
-    <form [formGroup]="this.teacherService.form" (ngSubmit)="onSubmit()">
-      <mat-horizontal-stepper>
+    <div class ="m">
+    <form [formGroup]="this.teacherService.form" (ngSubmit)="onSubmit()" >
+      <mat-horizontal-stepper >
         <mat-step>
            <ng-template matStepLabel ><p class="d-md-block d-none">Full Name<p></ng-template>
           <input type="hidden" formControlName="$key">
@@ -44,6 +44,7 @@
     <div class="alert alert-info" *ngIf="showSuccessMessage">
       submitted successfully.
     </div>
+    
      
     </div>
     
