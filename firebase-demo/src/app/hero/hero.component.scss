@@ -7,9 +7,9 @@
   background-image: url("../../assets/hero.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  top: -280px;
+  top: -45vh;
 }
-@media screen and (max-width:1400px){
+@media screen and (max-width:1000px){
   .hero-img{
     background-size:contain;
     width:100%;
