@@ -1,16 +1,4 @@
-<!-- <ng-container *ngFor="let teacher of teacherArray">
-  <tr *ngIf="filterCondition(teacher)">
-    <td scope="row">{{teacher.fullName}}</td>
-    <td scope="row">{{teacher.nickName}}</td>
-    <td class="d-none d-md-table-cell">{{teacher.favgames}}</td>
-    <td class="d-none d-md-table-cell">{{teacher.image}}</td>
-    <td>
-      <button class="btn btn-info " (click)="teacherService.populateForm(teacher)">Edit</button> </td>
-    <td><button class="btn btn-danger" (click)="onDelete(teacher.$key)">Delete</button>
-    </td>
-  </tr>
- -->
-<!-- </ng-container> -->
+
 
 <div class="container">
   <div class="row card-deck">
@@ -19,8 +7,8 @@
         
       
       <ng-container *ngFor="let teacher of teacherArray">
-        <div class= "col-4 card-deck" *ngIf="filterCondition(teacher)">
-          <div class="card text-white"><img class="card-img" src="/assets/card.png" />
+        <div class= "col-sm-12 col-md-8 col-lg-4 col-xl-4  card-deck" *ngIf="filterCondition(teacher)">
+          <div class="card text-white " ><img class="card-img" src="/assets/card.png" />
             <div class="card-img-overlay">
               <img class="foto"src="/assets/teacher/{{teacher.image}}" alt="img">
               <h2 class="card-title">{{teacher.fullName}}</h2>

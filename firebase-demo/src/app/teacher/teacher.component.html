@@ -1,10 +1,10 @@
 
-    <div class = "placeImput">
+    <div class = "placeImput container">
  
     <form [formGroup]="this.teacherService.form" (ngSubmit)="onSubmit()">
       <mat-horizontal-stepper>
         <mat-step>
-           <ng-template matStepLabel class="d-md-block d-none">Full Name</ng-template>
+           <ng-template matStepLabel ><p class="d-md-block d-none">Full Name<p></ng-template>
           <input type="hidden" formControlName="$key">
           <div class="form-group">
             <input formControlName="fullName" class="form-control" placeholder="FullName"  [ngClass]="{'is-invalid':submitted && formControls.fullName.errors}">
@@ -12,7 +12,7 @@
           </div>
         </mat-step>
         <mat-step>
-          <ng-template matStepLabel>NickName</ng-template>
+          <ng-template matStepLabel><p class="d-md-block d-none">NickName<p></ng-template>
 
           <div class="form-group">
             <input formControlName="nickName" class="form-control" placeholder="NickName"  [ngClass]="{'is-invalid':submitted && formControls.nickName.errors}">
@@ -20,7 +20,7 @@
           </div>
         </mat-step>
         <mat-step>
-                    <ng-template matStepLabel>Favourite Games</ng-template>
+                    <ng-template matStepLabel><p class="d-md-block d-none">Favourite Games<p></ng-template>
 
           <div class="form-group">
             <input formControlName="favgames" class="form-control" placeholder="Favourite Games"  [ngClass]="{'is-invalid':submitted && formControls.favgames.errors}">
@@ -28,7 +28,7 @@
           </div>
         </mat-step>
         <mat-step>
-          <ng-template matStepLabel>Image</ng-template>
+          <ng-template matStepLabel><p class="d-md-block d-none">Image</p></ng-template>
           <div class="form-group">
             <input formControlName="image" class="form-control" placeholder="Image"  [ngClass]="{'is-invalid':submitted && formControls.image.errors}">
             <div class="invalid-feedback" *ngIf="submitted && formControls.image.errors">invalid image ..</div>
@@ -36,7 +36,7 @@
         </mat-step>
       </mat-horizontal-stepper>
 
-      <div class="form-group">
+      <div class="form-group right">
         <input type="submit" class="btn btn-primary" value="Submit">
         
       </div>
