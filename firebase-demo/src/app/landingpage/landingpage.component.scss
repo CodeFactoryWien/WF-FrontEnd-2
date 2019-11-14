@@ -37,10 +37,10 @@
 
  }
 .join{
-  margin-left: 36vw;
-  display: inline-block;
+  margin-left: 45vw;
+  // display: inline-block;
   position: absolute;
-  top:200vh;
+  top:90vh;
 }
 
 .but{
@@ -83,4 +83,13 @@
 html, body {
   max-width: 100%;
   overflow-x: hidden;
+}
+@media screen and (max-width:1000px){
+ .join{
+  margin-left: 33vw;
+  // display: inline-block;
+  position: absolute;
+  top:100vh;
+}
+
 }
