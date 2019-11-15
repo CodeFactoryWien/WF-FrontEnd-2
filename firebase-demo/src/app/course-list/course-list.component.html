@@ -45,9 +45,9 @@
           </td >
         </tr>
       </ng-container>
-      <h1>Total Price {{getPrice("Action")}} €</h1>
+      
     </tbody>
-    </table>
+    </table><h1>Total Price {{getPrice("Action")}} €</h1>
   </mat-expansion-panel>
   <mat-expansion-panel (opened)="panelOpenState = true"
                        (closed)="panelOpenState = false">
@@ -85,10 +85,11 @@
           </td>
         </tr>
       </ng-container>
-      <h1>Total Price: {{getPrice("Jump & Run")}} €</h1>
+      
 
     </tbody>
     </table>
+    <h1>Total Price: {{getPrice("Jump & Run")}} €</h1>
   </mat-expansion-panel>
    <mat-expansion-panel (opened)="panelOpenState = true"
                        (closed)="panelOpenState = false">

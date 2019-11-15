@@ -1,0 +1,22 @@
+body {
+  background-image: url(./img/back.gif);
+  background-size: cover;
+  margin: 0 auto;
+  height: 100%; }
+
+.container {
+  text-align: center; }
+
+.hero {
+  margin-right: 5%;
+  margin-top: 6%;
+  width: 32%;
+  height: 14%; }
+
+span {
+  font-size: 2vw;
+  position: absolute;
+  bottom: 0.3vw;
+  left: 50%; }
+
+/*# sourceMappingURL=style2.css.map */
